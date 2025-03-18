@@ -51,3 +51,6 @@ Thumbs.db
 
 # test 
 test/
+
+#image data set
+skin-disease-dataset/
