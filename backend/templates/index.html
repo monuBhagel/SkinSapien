@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Disease Detector</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+        <h1 class="text-2xl font-semibold text-center text-gray-700 mb-4">Upload an Image for Skin Disease Detection</h1>
+        <a href="/history" class="mt-4 inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition">View Past Diagnoses</a>
+        <form action="/predict" method="POST" enctype="multipart/form-data" class="flex flex-col gap-4">
+            <input type="file" name="file" required class="border p-2 rounded w-full">
+            <button type="submit" class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600 transition">Upload</button>
+        </form>
+        {% if error %}
+            <div class="mt-4 p-3 bg-red-100 text-red-700 rounded">{{ error }}</div>
+        {% endif %}
+        {% if results %}
+            <div class="mt-4 p-3 bg-green-100 text-green-700 rounded">
+                <h2 class="text-lg font-semibold">Predictions:</h2>
+                <ul class="list-disc pl-5">
+                    {% for result in results %}
+                        <li><strong>{{ result.disease }}</strong> - Confidence: {{ result.confidence }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
