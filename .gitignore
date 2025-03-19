@@ -57,3 +57,6 @@ skin-disease-dataset/
 
 # progress summary
 progress_summary/
+
+# node modules
+node_modules/
