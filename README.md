@@ -1,30 +1,29 @@
 # SkinSapien
 
+
 ```
 skinsapiens-webapp
 ├─ README.md
 ├─ backend
 │  ├─ app.py
 │  ├─ models
+│  │  ├─ final_skin_model.keras
 │  │  └─ predict.py
-│  ├─ requirements.txt
 │  ├─ routes
 │  │  ├─ predict.py
 │  │  └─ users.py
-│  ├─ static
 │  └─ templates
-├─ frontend
-│  ├─ package.json
-│  ├─ public
-│  └─ src
-│     ├─ App.js
-│     ├─ components
-│     ├─ index.js
-│     └─ pages
+│     ├─ history.html
+│     └─ index.html
 ├─ model
-├─ notebooks
-│  └─ preproces.ipynb
+├─ package-lock.json
+├─ package.json
+├─ preproces.ipynb
 ├─ preprocess_data.py
-└─ requirements.txt
+├─ requirements.txt
+├─ temp
+│  ├─ 32_FU-ringworm (33).jpg
+│  └─ 35_FU-ringworm (20).jpg
+└─ train_skin_model.ipynb
 
 ```
