@@ -54,3 +54,6 @@ test/
 
 #image data set
 skin-disease-dataset/
+
+# progress summary
+progress_summary/
